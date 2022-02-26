@@ -73,7 +73,7 @@ const CartProvider = (props) => {
     dispatchCartAction({type:"CLEAR"})
   }
 
-  const cartContex = {
+  const cartContext = {
     items: cartState.items,
     totalAmount: cartState.totalAmount,
     AddItem: onAddItemHandler,
@@ -81,7 +81,7 @@ const CartProvider = (props) => {
     clearCart:onClearCartHandler
   };
   return (
-    <CartContext.Provider value={cartContex}>
+    <CartContext.Provider value={cartContext}>
       {props.children}
     </CartContext.Provider>
   );
